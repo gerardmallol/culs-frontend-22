@@ -2,6 +2,7 @@ body.show {
     font-family: Georgia, 'Times New Roman', Times, serif;
     overflow: hidden;
     background-color: white;
+    color: black;
 }
 
 .presentation section {
