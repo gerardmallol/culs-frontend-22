@@ -1,8 +1,8 @@
 body.show {
     font-family: Georgia, 'Times New Roman', Times, serif;
     overflow: hidden;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
 }
 
 .presentation section {
@@ -44,7 +44,12 @@ body.show {
 
 .buttons {
     width: 12rem;
-    transition: opacity 500ms ease-in-out;
+    display: flex;
+    justify-content: center;
+    transition: opacity 1s ease-in-out;
+    background-color: white;
+    border-radius: 8px;
+    padding: 3px;
 }
 
 .buttons button {
@@ -100,4 +105,8 @@ button[disabled]{
 
 .nnext {
     background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevrons-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" ></path> <polyline points="7 7 12 12 7 17" ></polyline> <polyline points="13 7 18 12 13 17" ></polyline> </svg>')
+}
+
+svg {
+    color:red;
 }
