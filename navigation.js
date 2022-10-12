@@ -34,7 +34,7 @@ function moveChapter(amount) {
         previousSlide.disabled = true;
         nextSlide.disabled = false;
     }
-    
+
     titles[chapter].querySelector(".position").innerHTML = slides[chapter] + 1;
     titles[chapter].style.display = "inline";
     presentation.style.translate = "-" + slides[chapter] + "00vw -" + chapter + "00vh";
@@ -68,7 +68,30 @@ function unfadeButtons(e) {
     buttons.style.opacity = 1;
 }
 
+document.addEventListener("keydown", (e) => { keyFunction(e) })
 
+function keyFunction(e) {
+    if (e.code == "ArrowLeft") {
+        moveSlide(-1);
+    }
+    
+    if (e.code == "ArrowRight") {
+        moveSlide(1);
+    }
+
+    if(e.code == "ArrowUp") {
+        moveChapter(-1);
+    }
+
+    if(e.code == "ArrowDown") {
+        moveChapter(1);
+    }
+
+    if(e.code == "KeyR") {
+        moveChapter(-chapter);
+        moveSlide(-slides[chapter]);
+    }
+}
 
 nextSlide.addEventListener("click", (e) => { moveSlide(1) });
 previousSlide.addEventListener("click", (e) => { moveSlide(-1) });
