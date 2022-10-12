@@ -1,7 +1,7 @@
 body.show {
     font-family: Georgia, 'Times New Roman', Times, serif;
     overflow: hidden;
-    background-color: rgb(225, 225, 225);
+    background-color: white;
 }
 
 .presentation section {
@@ -13,6 +13,10 @@ body.show {
     padding: 10vh 10vw;
     font-size: 48px;
     text-align: center;
+}
+
+.presentation {
+    transition: 500ms all ease-out;
 }
 
 .chapter {
