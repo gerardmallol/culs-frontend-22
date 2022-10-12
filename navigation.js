@@ -1,12 +1,12 @@
 let chapter = 0;
-const buttons = document.getElementById("tools").getElementsByClassName("buttons")[0]
+const buttons = document.getElementById("tools").getElementsByClassName("buttons")[0];
 const nextSlide = document.getElementById("nextSlide");
 const previousSlide = document.getElementById("previousSlide");
 const nextChapter = document.getElementById("nextChapter");
 const previousChapter = document.getElementById("previousChapter");
 const restart = document.getElementById("restart");
 const presentation = document.getElementById("presentation");
-const chapters = document.getElementsByClassName("chapter")
+const chapters = document.getElementsByClassName("chapter");
 const chapterArr = Array.from(chapters);
 const chapterLengths = chapterArr.map((chapter) => parseInt(chapter.style.width.slice(0, -4)));
 const slides = chapterArr.map((chapter) => 0);
@@ -29,6 +29,9 @@ function moveChapter(amount) {
     titles[chapter].querySelector(".position").innerHTML = slides[chapter] + 1;
     titles[chapter].style.display = "inline";
     presentation.style.translate = "-" + slides[chapter] + "00vw -" + chapter + "00vh";
+    if(amount != 0) {
+        slides[chapter - amount] = 0;
+    }
 }
 
 
